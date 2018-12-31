@@ -1,7 +1,7 @@
-provider "azurerm" {
-}
-# An Example Resource Group to Test
-resource "azurerm_resource_group" "rg" {
-        name = "testResourceGroup"
-        location = "eastus2"
+module "new_resrouce_group" {
+  source = "resource_group"
+
+  location = "eastus2"
+  name = "testRG"
+  environment = "dev"
 }
